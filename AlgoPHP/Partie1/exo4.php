@@ -10,8 +10,8 @@ $sansespace = str_replace(" ","",$minphrase);
 $renverse = strrev($sansespace);
 
 if($phrase==$renverse){
-    echo "La phrase <<$phrase>> est un palindrome.";
+    echo "La phrase << $phrase >> est un palindrome.";
 } else {
-     echo "La phrase <<$phrase>> n'est pas un palindrome.";
+     echo "La phrase << $phrase >> n'est pas un palindrome.";
 }
 ?>

@@ -12,18 +12,21 @@
 <?php
 function table1(int $chiffre){
     $i = 0;
-    echo "table de $chiffre";
+    echo "table de $chiffre <br/>";
     while($i <= 10){
-        echo $chiffre*$i;
+        echo "$chiffre*$i <br/>";
         $i++;
     }
 }
+echo table1(8);
 
 function table2(int $chiffre){
     $i = 0;
-    echo "table de $chiffre";
+    echo "table de $chiffre <br/>";
     do{
-        echo $chiffre*$i;
+        echo "$chiffre*$i <br/>";
+        $i++;
     } while($i <= 10);
 }
+echo table2(8);
 ?>

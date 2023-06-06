@@ -25,4 +25,5 @@ function imposable(int $age, $sexe){
         echo "La personne n'est pas imposable.";
     }
 }
+echo imposable(32, F);
 ?>

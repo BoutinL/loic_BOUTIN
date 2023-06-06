@@ -8,5 +8,5 @@
 $phrase = "Notre formation DL commence aujourd'hui";
 $nbrmot = str_word_count($phrase);
 
-echo "La phrase <<$phrase>> contient $nbrmot mots."
+echo "La phrase << $phrase >> contient $nbrmot mots."
 ?>

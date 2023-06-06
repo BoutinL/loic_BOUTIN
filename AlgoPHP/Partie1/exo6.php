@@ -5,7 +5,7 @@
 </p>
 <h2>Résultat</h2>
 <?php
-//Je ne pense pas avoir compris l'intitulé .
+//Je ne pense pas avoir compris l'intitulé.
 $prixunitaire = 9.99;
 $quantite = 5;
 $tva = 0.2;

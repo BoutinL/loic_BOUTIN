@@ -7,8 +7,9 @@
 <?php
 $montantfrancs = 100;
 $equivalentfreuro = 0.1524;
-echo "Montant en Francs: $montantfrancs";
 $conversion = $montantfrancs*$equivalentfreuro;
 $arrondidecimal = round($conversion, 2);
+
+echo "Montant en Francs: $montantfrancs <br/>";
 echo "$montantfrancs francs = $arrondidecimal €"
 ?>

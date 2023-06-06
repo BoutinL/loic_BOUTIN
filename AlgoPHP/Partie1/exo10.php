@@ -11,5 +11,32 @@
 </p>
 <h2>Résultat</h2>
 <?php
-
+function change ($payer, $verse){
+    $rendre = $verse-$payer;
+    echo "Montant à payer : $payer €<br/>";
+    echo "Montant versé : $verse €<br/>";
+    echo "Reste à payer : $rendre €<br/>";
+    echo "********************************<br/>";
+    $b10 = 0;
+    $b5 = 0;
+    $p2 = 0;
+    $p1 = 0;
+    switch (true){
+        case $rendre >= 10:
+            $rendre -10;
+            $b10++;
+        case $rendre <= 9 && $rendre >= 5:
+            $rendre - 5;
+            $b5++;
+        case $rendre <= 4 && $rendre >= 2:
+            $rendre -2;
+            $p2++;
+        case $rendre <= 1:
+            $rendre -1;
+            $p1++;
+    }
+    echo "Rendue de monnaie:<br/>";
+    echo "$b10 billets de 10€ $b5 billets de 5€ $p2 pièce de 2€ $p1 pièce de 1€";
+}
+echo change(152,200)
 ?>
