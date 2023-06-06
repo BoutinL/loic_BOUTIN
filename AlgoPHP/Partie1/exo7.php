@@ -22,4 +22,5 @@ function categorie(int $age){
         return "<p>Catégorie Cadet</p>";
     }
 }
+echo categorie(12);
 ?>
