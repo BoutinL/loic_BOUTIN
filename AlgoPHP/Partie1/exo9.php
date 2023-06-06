@@ -10,5 +10,19 @@
 </p>
 <h2>Résultat</h2>
 <?php
-
+function imposable(int $age, $sexe){
+    if($sexe == H && $age >= 20){
+        echo "Age : $age";
+        echo "Sexe : $sexe";
+        echo "La personne est imposable.";
+    } else if($sexe == F && $age >= 18 && $age <= 35){
+        echo "Age : $age";
+        echo "Sexe : $sexe";
+        echo "La personne est imposable.";
+    } else {
+        echo "Age : $age";
+        echo "Sexe : $sexe";
+        echo "La personne n'est pas imposable.";
+    }
+}
 ?>
