@@ -12,34 +12,29 @@
 <h2>Résultat</h2>
 <?php
 function change ($payer, $verse){
-    $b10 = 0;
-    $b5 = 0;
-    $p2 = 0;
-    $p1 = 0;
+    $nbrb10 = 0;
+    $nbrb5 = 0;
+    $nbrp2 = 0;
+    $nbrp1 = 0;
+    $b10vlr = 10;
+    $b5vlr = 5;
+    $p2vlr = 2;
+    $p1vlr = 1;
     $rendre = $verse-$payer;
     echo "Montant à payer : $payer €<br/>";
     echo "Montant versé : $verse €<br/>";
     echo "Reste à payer : $rendre €<br/>";
     echo "********************************<br/>";
-    while($rendre <= 0){
-        switch (true){
-            case $rendre >= 10:
-                $rendre -10;
-                $b10++;
-            case $rendre <= 9 && $rendre >= 5:
-                $rendre - 5;
-                $b5++;
-            case $rendre <= 4 && $rendre >= 2:
-                $rendre -2;
-                $p2++;
-            case $rendre <= 1:
-                $rendre -1;
-                $p1++;
-        }
-    }
+    $nbrb10 = intdiv($rendre, $b10vlr);
+    $resterendre1 = $rendre - $b10vlr * $nbrb10;
+    $nbrb5 = intdiv($resterendre1, $b5vlr);
+    $resterendre2 = $resterendre1 - $b5vlr * $nbrb5;
+    $nbrp2 = intdiv($resterendre2, $p2vlr);
+    $resterendre3 = $resterendre2 - $p2vlr * $nbrp2;
+    $nbrp1 = intdiv($resterendre3, $p1vlr);
+    $resterendre4 = $resterendre3 - $p1vlr * $nbrp1;
     echo "Rendue de monnaie:<br/>";
-    echo "$b10 billets de 10€ $b5 billets de 5€ $p2 pièce de 2€ $p1 pièce de 1€";
-    
+    echo "$nbrb10 billets de 10€ $nbrb5 billets de 5€ $nbrp2 pièce de 2€ $nbrp1 pièce de 1€";
 }
 echo change(152,200)
 ?>
