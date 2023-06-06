@@ -9,6 +9,7 @@
 </p>
 <h2>Résultat</h2>
 <?php
+//Switch case plus adapté que else if ?
 function categorie(int $age){
     if($age < 6){
         return "<p>Il n'y a pas de catégorie pour cet age</p>";

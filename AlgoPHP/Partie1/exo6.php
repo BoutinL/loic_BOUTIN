@@ -5,10 +5,11 @@
 </p>
 <h2>Résultat</h2>
 <?php
-//Je ne pense pas avoir compris l'intitulé.
 $prixunitaire = 9.99;
 $quantite = 5;
 $tva = 0.2;
-$total = $prixunitaire*$quantite;
-echo "le montant de la facture à régler est de: $total"
+$totalht = $prixunitaire*$quantite;
+echo "Le montant de la facture à régler HT est de: $totalht € <br/>";
+$totalttc = $quantite * $prixunitaire * (1 + $tva);
+echo "Le montant de la facture à régler TTC est de: $totalttc €";
 ?>
