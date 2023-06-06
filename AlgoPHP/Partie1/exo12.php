@@ -7,5 +7,18 @@ Variante: trier d’abord le tableau par ordre alphabétique du prénomAffichage
 </p>
 <h2>Résultat</h2>
 <?php
-
+$tourist = [
+    "Mickaêl" => "FRA",
+    "Virgile" => "ESP",
+    "Marie-Claire" => "ENG",
+];
+foreach($tourist as $prenom => $langue) {
+    if($langue == "FRA") {
+        echo "Bonjour $prenom <br/>";
+    } elseif($langue == "ENG"){
+        echo "Hello $prenom <br/>";
+    } else {
+        echo "Hola $prenom <br/>";
+    }
+}
 ?>
