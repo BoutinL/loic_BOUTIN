@@ -10,5 +10,20 @@
 </p>
 <h2>Résultat</h2>
 <?php
+function table1(int $chiffre){
+    $i = 0;
+    echo "table de $chiffre";
+    while($i <= 10){
+        echo $chiffre*$i;
+        $i++;
+    }
+}
 
+function table2(int $chiffre){
+    $i = 0;
+    echo "table de $chiffre";
+    do{
+        echo $chiffre*$i;
+    } while($i <= 10);
+}
 ?>
