@@ -8,5 +8,7 @@ Affichage:
 </p>
 <h2>Résultat</h2>
 <?php
-
+$notes = ["10", "12", "8", "19","3", "16", "11", "13", "9"];
+;
+echo round(array_sum($notes)/9,2);
 ?>
