@@ -7,7 +7,7 @@
 </p>
 <h2>Résultat</h2>
 <?php
-$birthday = new DateTime("1998-05-07");
+$birthday =("1998-05-07");
 $today = new DateTime();
 $dif = date_diff($birthday, $today);
 $y = $dif->format('%y');
